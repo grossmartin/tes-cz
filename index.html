@@ -4,6 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lama karta — The Elder Scrolls: Zrada v druhém věku</title>
+<!-- Favicon: embedded (funguje i jako samostatný soubor) -->
+<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,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">
+<link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAACMElEQVR42jWSyW/TUBjE5/vec5zETrOULkJQhMSOUKGcuMM/z3JjUwGhLilpEUlLmtjP9vuGg8VtDjOH+c3IzjhzKqriVJ1K0zRNXQMCMJp5nyRJQiCamTEavbZuEZpVdTOZjO/cvTMcDrq9vhm/HX6dnp7XTeNUARBwwyx1KiqyvT0+eLn/6PGjfpZVIYSy2LwxPnh+r99L1+uqLEoAArhx3qXZ1tbozetX6yJMT6Yf3r47n82mxycnRyeLxfX2znae90T9YnGpqgogSfwg74ktd7YGi/mftJN0006eZyo4PT67OD/P+5L3O05VRNwwS7up39vbLUOczf78ml6kHS8CEahKjHY5v0p7/cXiqihCjKaqEqo6RpvPr798/p4kKiLOqXciAu+1biLAyWRYV7WqeBCiEo3OdwARkbacQAC2+ujnWTbIVdUAhSBGWy7LjdGIJACSLXISgBjZy/JsMIxmAigJEfn9e14UIel0yjKEqo5GA42sqrqq6/sPH/y9WtLs/w5OQwiJd7f3boXQ5IPserksipqQPM/2XzxdrYvDwx+qakZvZDRzzp9NZ2naffLsye7ucDQaFeuyKMJ6tfy7LD6+/wTQKEbKzc3cqThVEQBM02Q82nhx8OzycrFahR/fj1erNUQIxGjRKLuTvL2GU2nZpx1flME5DzKaiWjLwMhodP3Ut98kAIBE3UQRZ6QZAInGSJKMBjPzRsAMKjBQIEKBUKwNEyRB0kgzGvEPnMZa9N5/iQIAAAAASUVORK5CYII=">
+<link rel="shortcut icon" href="favicon.ico">
+<!-- iOS „Přidat na plochu": Safari vyžaduje fyzický PNG soubor -->
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="167x167" href="apple-touch-icon-167.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#15100c">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Lama karta">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Oswald:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -66,12 +80,10 @@ nav.tabs{
   border-top:1px solid rgba(192,162,80,.22);border-bottom:1px solid rgba(0,0,0,.6);
   box-shadow:0 8px 22px rgba(0,0,0,.45);
 }
-.tabrow{display:flex;gap:8px;max-width:1120px;margin:0 auto;overflow-x:auto;scrollbar-width:thin;scrollbar-color:#5a4a2e transparent;padding-bottom:2px}
-.tabrow::-webkit-scrollbar{height:5px}
-.tabrow::-webkit-scrollbar-thumb{background:#5a4a2e;border-radius:3px}
+.tabrow{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;max-width:1120px;margin:0 auto}
 .tab{
-  flex:1 0 auto;display:flex;flex-direction:column;align-items:center;gap:4px;
-  min-width:102px;padding:10px 14px 9px;cursor:pointer;user-select:none;
+  min-width:0;display:flex;flex-direction:column;align-items:center;gap:4px;
+  padding:10px 10px 9px;cursor:pointer;user-select:none;
   background:linear-gradient(180deg,#2c2317,#211a11);
   border:1px solid #40331f;border-radius:3px;color:#a99a75;
   font-family:'Cinzel',serif;font-weight:600;font-size:14px;letter-spacing:.08em;
@@ -197,9 +209,12 @@ mark{background:rgba(192,162,80,.4);color:inherit;border-radius:2px;padding:0 1p
 footer{text-align:center;margin-top:48px;color:#7a6c4e;font-size:14.5px;font-style:italic}
 footer .fl{color:var(--gold-deep)}
 
+@media(max-width:620px){
+  .tabrow{grid-template-columns:repeat(3,1fr)}
+}
 @media(max-width:560px){
   body{font-size:17px}
-  .tab{min-width:88px;font-size:12.5px;padding:9px 8px 8px}
+  .tab{font-size:12.5px;padding:9px 6px 8px}
   .tab .ico{font-size:17px}
   .card{padding:18px 16px 16px}
   .card p,ol.steps>li{font-size:16.5px}
@@ -211,6 +226,30 @@ footer .fl{color:var(--gold-deep)}
 .section.searchmode .section-head,.section.searchmode .ribbon{display:none}
 .section.searchmode{padding-bottom:0}
 .section.searchmode .grid{margin-bottom:16px}
+
+/* ---------- Sub-tabs (inside Bitva) ---------- */
+.subtabs{display:flex;flex-wrap:wrap;gap:7px;justify-content:center;margin:0 auto 22px;max-width:760px}
+.subtab{
+  font-family:'Oswald',sans-serif;font-weight:500;font-size:14px;letter-spacing:.04em;
+  text-transform:uppercase;color:#c7b489;cursor:pointer;user-select:none;
+  padding:8px 16px;border-radius:22px;border:1px solid #4a3a24;
+  background:linear-gradient(180deg,#2c2317,#211a11);transition:all .16s ease;
+}
+.subtab:hover{color:var(--parch);border-color:#6a5630;transform:translateY(-1px)}
+.subtab[aria-selected="true"]{
+  color:#fff3df;border-color:var(--accent);
+  background:linear-gradient(180deg,#4a2020,#331414);
+  box-shadow:0 0 0 1px var(--accent) inset,0 3px 12px rgba(0,0,0,.4);
+}
+.subpanel{display:none;animation:rise .3s ease both}
+.subpanel.active{display:block}
+.section.searchmode .subtabs{display:none}
+.section.searchmode .subpanel{display:block!important}
+
+/* enemy glossary tweaks */
+.gloss .term{flex-basis:30%}
+.gloss .desc{font-size:16px}
+.prov-tag{font-family:'Oswald',sans-serif;font-weight:500;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:#fff3df;background:var(--accent-deep);border-radius:4px;padding:1px 7px;margin-left:6px;vertical-align:middle}
 </style>
 </head>
 <body>
@@ -405,124 +444,245 @@ footer .fl{color:var(--gold-deep)}
     <div class="section-flourish"><span class="ln"></span><span class="dia"></span><span class="ln"></span></div>
   </div>
 
-  <div class="grid two">
-    <div class="card span2"><span class="accent-tab"></span>
-      <h3>Průběh kola</h3>
-      <div class="sub">Pořadí v každém kole</div>
-      <ol class="steps">
-        <li><b>Začátek kola</b> — zvyš počítadlo kol o 1 (v 1. kole nezvyšuj). Spusť účinky na začátku kola.</li>
-        <li><b>Tahy dobrodruhů</b> — od prvního hráče ve směru hodinových ručiček.</li>
-        <li><b>Tahy společníků</b> — pořadí určí družina.</li>
-        <li><b>Tahy nepřátel</b> — od nejvyšší úrovně po nejnižší (stejná úroveň → pořadí určí družina). Úkolové jednotky = nejvyšší úroveň.</li>
-        <li><b>Konec kola</b> — spusť účinky na konci kola; ověř splnění cíle (bitva může skončit); družina může ustoupit.</li>
-      </ol>
-      <div class="note warn"><span class="lbl">Kola únavy — po 5. kole</span> Každé další kolo = kolo únavy (počítej jako 6. kolo). Na začátku každého kola únavy získá každý dobrodruh <span class="val">1 kostku silné únavy</span> a dostane <b>přímé poškození</b> = počtu svých kostek silné únavy.</div>
-    </div>
+  <div class="subtabs" role="tablist" aria-label="Části bitvy">
+    <button class="subtab" role="tab" data-sub="kolo" aria-selected="true">Průběh kola</button>
+    <button class="subtab" role="tab" data-sub="dobrodruh">Tah dobrodruha</button>
+    <button class="subtab" role="tab" data-sub="nepritel">Tah nepřítele</button>
+    <button class="subtab" role="tab" data-sub="cile">Cíle &amp; konec</button>
+    <button class="subtab" role="tab" data-sub="schopnosti">Schopnosti nepřátel</button>
+  </div>
 
-    <div class="card span2"><span class="accent-tab"></span>
-      <h3>Tah dobrodruha</h3>
-      <div class="sub">Zotavení → akce</div>
-      <ol class="steps">
-        <li><b>Začátek tahu</b> — spusť účinky na začátku tvého tahu.</li>
-        <li><b>Zotavení</b> — odstraň zleva ze stupnice regenerace tolik kostek, kolik je tvá <b>hodnota regenerace</b>. Kostky dovedností obnov, kostky únavy/stavů vrať do zásoby (silná únava zůstává na stupnici — přesuň ji vlevo).</li>
-        <li><b>Akce dobrodruha</b> — v libovolném pořadí, každou dokonči před další. Bez limitu počtu (kromě omezení níže): <b>Přesun</b>, <b>Útok</b>, <b>Schopnost třídy</b>, <b>Průzkum</b>.</li>
-        <li><b>Konec tahu</b> — spusť účinky na konci tahu.</li>
-      </ol>
-    </div>
-
-    <div class="card"><span class="accent-tab"></span>
-      <h3>Akce: Přesun</h3>
-      <ul class="bullets">
-        <li>Přesuň se až o <b>hodnotu výdrže</b> polí (na sousedící neobsazená pole).</li>
-        <li><b>2× za tah</b> — druhý přesun jen pokud jsi <b>neprovedl útok</b>; poté už útok nesmíš.</li>
-        <li>Nesmíš přesun kombinovat s <b>průzkumem</b> ve stejném tahu.</li>
-        <li>„Přesun zdarma" ze schopnosti se nepočítá jako akce přesun.</li>
-      </ul>
-    </div>
-
-    <div class="card"><span class="accent-tab"></span>
-      <h3>Akce: Schopnost třídy</h3>
-      <ul class="bullets">
-        <li>Utraťte body houževnatosti a spusť schopnost třídy.</li>
-        <li>Schopnost <b>bez</b> klíčového slova trvající: jen v uvedeném čase a max 1× za tah.</li>
-        <li>Před vyhodnocením můžeš získat 1 kostku slabé únavy a změnit bojový styl.</li>
-      </ul>
-    </div>
-
-    <div class="card span2"><span class="accent-tab"></span>
-      <h3>Akce: Útok</h3>
-      <div class="sub">První útok zdarma · každý další za únavu</div>
-      <ol class="steps">
-        <li><b>Získejte kostku únavy</b> — první útok v tahu bez postihu. Za každý další útok získej <span class="pill red">1 kostku slabé únavy</span> (na obtížnosti Odborník <b>2</b>).</li>
-        <li><b>Zvolte bojový styl</b> — lze i změnit (vlož meč do výřezu nového stylu).</li>
-        <li><b>Zvolte cíl</b> — 1 jednotka na útok, musí být <b>v dohledu</b> a <b>v dosahu</b> tvého bojového stylu.</li>
-        <li><b>Vezměte kostky a hoďte</b> — počet kostek ≤ tvá <b>výdrž</b> nebo <b>magie</b> (podle dovednostní linie). Soubojové kostky lze s každým stylem kromě obrany. Max 1 předmět typu zbraň na útok.</li>
-        <li><b>Vyhodnoťte hod</b> — nejdřív sečti celé poškození, pak uděl. Symbol houževnatosti → kostku vyčerpej a získej 1 bod. Nevyhodnocené kostky nakonec vyčerpej.</li>
-        <li><b>Reakce jednotek</b> — po útoku se spustí reakce (nepřátelé musí, pokud mohou).</li>
-      </ol>
-      <div class="note"><span class="lbl">Pořadí akce přesun</span> Přesun můžeš provést před nebo po útoku — ne však zároveň před i po témže útoku.</div>
-    </div>
-
-    <div class="card span2"><span class="accent-tab"></span>
-      <h3>Bojové styly — dosah</h3>
-      <div class="sub">Určuje kostky a dosah útoku</div>
-      <div class="deflist">
-        <div class="row"><div class="term">Lehká zbraň<span class="tag">na blízko</span></div><div class="desc">Dosah — <b>jen sousedící</b>. Jednoruční zbraně (např. Jednoruční zbraň a štít).</div></div>
-        <div class="row"><div class="term">Těžká zbraň<span class="tag">na blízko</span></div><div class="desc">Dosah — <b>jen sousedící</b>. Obouruční zbraně (např. Obouruční zbraň).</div></div>
-        <div class="row"><div class="term">Obrana<span class="tag">bez dosahu</span></div><div class="desc">Dovednost Souboj bez udělování poškození — příprava obrany (např. Těžká zbroj).</div></div>
-        <div class="row"><div class="term">Zbraň na dálku<span class="tag">dálka</span></div><div class="desc">Dosah — <b>nesousedící až po hodnotu výdrže</b>. Nesmíš cílit na sousedící jednotky (např. Luk).</div></div>
-        <div class="row"><div class="term">Magie<span class="tag">dálka</span></div><div class="desc">Dosah — <b>až po hodnotu magie</b>. Nesmíš přidávat kostky Souboj (např. Hůl ničení).</div></div>
+  <!-- SUB: Průběh kola -->
+  <div class="subpanel active" id="sub-kolo">
+    <div class="grid two">
+      <div class="card span2"><span class="accent-tab"></span>
+        <h3>Průběh kola</h3>
+        <div class="sub">Pořadí v každém kole</div>
+        <ol class="steps">
+          <li><b>Začátek kola</b> — zvyš počítadlo kol o 1 (v 1. kole nezvyšuj). Spusť účinky na začátku kola.</li>
+          <li><b>Tahy dobrodruhů</b> — od prvního hráče ve směru hodinových ručiček.</li>
+          <li><b>Tahy společníků</b> — pořadí určí družina.</li>
+          <li><b>Tahy nepřátel</b> — od nejvyšší úrovně po nejnižší (stejná úroveň → pořadí určí družina). Úkolové jednotky = nejvyšší úroveň.</li>
+          <li><b>Konec kola</b> — spusť účinky na konci kola; ověř splnění cíle (bitva může skončit); družina může ustoupit.</li>
+        </ol>
+        <div class="note warn"><span class="lbl">Kola únavy — po 5. kole</span> Každé další kolo = kolo únavy (počítej jako 6. kolo). Na začátku každého kola únavy získá každý dobrodruh <span class="val">1 kostku silné únavy</span> a dostane <b>přímé poškození</b> = počtu svých kostek silné únavy.</div>
       </div>
     </div>
+  </div>
 
-    <div class="card span2"><span class="accent-tab"></span>
-      <h3>Zabránění poškození</h3>
-      <ul class="bullets">
-        <li>Odečti zabráněné poškození od příchozího; zbytek jednotka utrpí (ztratí BZ).</li>
-        <li>Zabráněné poškození <b>se stále počítá jako udělené</b> (pro jiné spouštěče), ale nespustí efekty „utrpěného" poškození.</li>
-        <li>Schopnosti zabránění lze (pokud není uvedeno jinak) použít jen během bitvy.</li>
-        <li>Přímému poškození nelze zabránit — jen pokud schopnost výslovně uvádí „přímé".</li>
-      </ul>
-    </div>
-
-    <div class="card span2"><span class="accent-tab"></span>
-      <h3>Tah nepřítele</h3>
-      <div class="sub">Přesun max 2 pole</div>
-      <ol class="steps">
-        <li><b>Začátek tahu</b> — spusť účinky (např. kostka stavu na žetonu).</li>
-        <li><b>Přesun</b> — až <span class="val">2 pole</span>, a to <b>jen pokud nemá v dosahu žádný cíl</b>. Přesouvá se k nejbližšímu poli, odkud by měl v dosahu a dohledu aspoň 1 zacílitelnou jednotku (mezi ním a cílovým polem musí být pole neobsazená). Pokud takové pole není, jde co nejblíže k nejbližší jednotce (podle priority).</li>
-        <li><b>Útok</b> — zacílí tolik jednotek, kolik je „počet cílů" (symboly postav), v pořadí <b>priority</b>. Hoď všemi soubojovými kostkami jednou, výsledek vyhodnoť vůči každému cíli (od nejvyšší priority). Poté reakce.</li>
-        <li><b>Konec tahu</b> — spusť účinky na konci tahu.</li>
-      </ol>
-      <div class="note"><span class="lbl">Při shodě priority</span> Pokud má více jednotek stejnou prioritu/BZ, cíl/pole zvolí družina. Při přesunu nepřítel nezohledňuje počet možných cílů.</div>
-    </div>
-
-    <div class="card span2"><span class="accent-tab"></span>
-      <h3>Cíle bitev</h3>
-      <div class="sub">Aby družina uspěla</div>
-      <div class="deflist">
-        <div class="row"><div class="term">Vítězství</div><div class="desc">Poraz nebo odstraň <b>všechny</b> nepřátele z mapy (nejčastěji u šarvátky).</div></div>
-        <div class="row"><div class="term">Eliminujte X</div><div class="desc">Poraz/odstraň konkrétní cílovou jednotku popsanou v textu setkání.</div></div>
-        <div class="row"><div class="term">Průzkum</div><div class="desc">Prozkoumej mapu — získej všechny nebeské úlomky (výchozí <b>3</b>). Časté u hlubin.</div></div>
-        <div class="row"><div class="term">Odhalení</div><div class="desc">Získej všechny nebeské úlomky (výchozí 3) a <b>poté ustup z bitvy</b>. Ústup zde = úspěch. ZkB za úlomky získáš i při selhání (ne při porážce celé družiny).</div></div>
+  <!-- SUB: Tah dobrodruha -->
+  <div class="subpanel" id="sub-dobrodruh">
+    <div class="grid two">
+      <div class="card span2"><span class="accent-tab"></span>
+        <h3>Tah dobrodruha</h3>
+        <div class="sub">Zotavení → akce</div>
+        <ol class="steps">
+          <li><b>Začátek tahu</b> — spusť účinky na začátku tvého tahu.</li>
+          <li><b>Zotavení</b> — odstraň zleva ze stupnice regenerace tolik kostek, kolik je tvá <b>hodnota regenerace</b>. Kostky dovedností obnov, kostky únavy/stavů vrať do zásoby (silná únava zůstává na stupnici — přesuň ji vlevo).</li>
+          <li><b>Akce dobrodruha</b> — v libovolném pořadí, každou dokonči před další. Bez limitu počtu (kromě omezení níže): <b>Přesun</b>, <b>Útok</b>, <b>Schopnost třídy</b>, <b>Průzkum</b>.</li>
+          <li><b>Konec tahu</b> — spusť účinky na konci tahu.</li>
+        </ol>
       </div>
-      <div class="note warn"><span class="lbl">Ústup z bitvy</span> Družina může na konci libovolného kola ustoupit — setkání okamžitě skončí. Družina selže a nezíská odměnu (výjimka: cíl Odhalení).</div>
-    </div>
 
-    <div class="card span2"><span class="accent-tab"></span>
-      <h3>Konec bitvy + úklid</h3>
-      <div class="sub">Bitva skončí na konci kola, když…</div>
-      <ul class="bullets">
-        <li>družina splnila cíl · ustoupila · nebo byli všichni dobrodruzi poraženi.</li>
-      </ul>
-      <div class="divider"></div>
-      <h4>Úklid po konci bitvy</h4>
-      <ol class="steps">
-        <li>Odstraň všechny bonusové BZ a BZ nad hodnotu zdraví; žeton dobrodruha vrať na kartu rasy.</li>
-        <li>Odstraň a vyčerpej kostky z výřezů pro aktivní kostky a obnov všechny <b>spálené</b> kostky. (Kostky na stupnici regenerace zůstávají do další bitvy.)</li>
-        <li>Rozlož mapu — žetony nepřátel zpět do sáčků, žetony skrýší do zásoby, dílky roztřiď.</li>
-      </ol>
-      <div class="note"><span class="lbl">Pozor</span> Úklid nastává jen po bitvě, nikdy po mírovém setkání. Poté pokračuj Fází odměn.</div>
+      <div class="card"><span class="accent-tab"></span>
+        <h3>Akce: Přesun</h3>
+        <ul class="bullets">
+          <li>Přesuň se až o <b>hodnotu výdrže</b> polí (na sousedící neobsazená pole).</li>
+          <li><b>2× za tah</b> — druhý přesun jen pokud jsi <b>neprovedl útok</b>; poté už útok nesmíš.</li>
+          <li>Nesmíš přesun kombinovat s <b>průzkumem</b> ve stejném tahu.</li>
+          <li>„Přesun zdarma" ze schopnosti se nepočítá jako akce přesun.</li>
+        </ul>
+      </div>
+
+      <div class="card"><span class="accent-tab"></span>
+        <h3>Akce: Schopnost třídy</h3>
+        <ul class="bullets">
+          <li>Utraťte body houževnatosti a spusť schopnost třídy.</li>
+          <li>Schopnost <b>bez</b> klíčového slova trvající: jen v uvedeném čase a max 1× za tah.</li>
+          <li>Před vyhodnocením můžeš získat 1 kostku slabé únavy a změnit bojový styl.</li>
+        </ul>
+      </div>
+
+      <div class="card span2"><span class="accent-tab"></span>
+        <h3>Akce: Útok</h3>
+        <div class="sub">První útok zdarma · každý další za únavu</div>
+        <ol class="steps">
+          <li><b>Získejte kostku únavy</b> — první útok v tahu bez postihu. Za každý další útok získej <span class="pill red">1 kostku slabé únavy</span> (na obtížnosti Odborník <b>2</b>).</li>
+          <li><b>Zvolte bojový styl</b> — lze i změnit (vlož meč do výřezu nového stylu).</li>
+          <li><b>Zvolte cíl</b> — 1 jednotka na útok, musí být <b>v dohledu</b> a <b>v dosahu</b> tvého bojového stylu.</li>
+          <li><b>Vezměte kostky a hoďte</b> — počet kostek ≤ tvá <b>výdrž</b> nebo <b>magie</b> (podle dovednostní linie). Soubojové kostky lze s každým stylem kromě obrany. Max 1 předmět typu zbraň na útok.</li>
+          <li><b>Vyhodnoťte hod</b> — nejdřív sečti celé poškození, pak uděl. Symbol houževnatosti → kostku vyčerpej a získej 1 bod. Nevyhodnocené kostky nakonec vyčerpej.</li>
+          <li><b>Reakce jednotek</b> — po útoku se spustí reakce (nepřátelé musí, pokud mohou).</li>
+        </ol>
+        <div class="note"><span class="lbl">Pořadí akce přesun</span> Přesun můžeš provést před nebo po útoku — ne však zároveň před i po témže útoku.</div>
+      </div>
+
+      <div class="card span2"><span class="accent-tab"></span>
+        <h3>Bojové styly — dosah</h3>
+        <div class="sub">Určuje kostky a dosah útoku</div>
+        <div class="deflist">
+          <div class="row"><div class="term">Lehká zbraň<span class="tag">na blízko</span></div><div class="desc">Dosah — <b>jen sousedící</b>. Jednoruční zbraně (např. Jednoruční zbraň a štít).</div></div>
+          <div class="row"><div class="term">Těžká zbraň<span class="tag">na blízko</span></div><div class="desc">Dosah — <b>jen sousedící</b>. Obouruční zbraně (např. Obouruční zbraň).</div></div>
+          <div class="row"><div class="term">Obrana<span class="tag">bez dosahu</span></div><div class="desc">Dovednost Souboj bez udělování poškození — příprava obrany (např. Těžká zbroj).</div></div>
+          <div class="row"><div class="term">Zbraň na dálku<span class="tag">dálka</span></div><div class="desc">Dosah — <b>nesousedící až po hodnotu výdrže</b>. Nesmíš cílit na sousedící jednotky (např. Luk).</div></div>
+          <div class="row"><div class="term">Magie<span class="tag">dálka</span></div><div class="desc">Dosah — <b>až po hodnotu magie</b>. Nesmíš přidávat kostky Souboj (např. Hůl ničení).</div></div>
+        </div>
+      </div>
+
+      <div class="card span2"><span class="accent-tab"></span>
+        <h3>Zabránění poškození</h3>
+        <ul class="bullets">
+          <li>Odečti zabráněné poškození od příchozího; zbytek jednotka utrpí (ztratí BZ).</li>
+          <li>Zabráněné poškození <b>se stále počítá jako udělené</b> (pro jiné spouštěče), ale nespustí efekty „utrpěného" poškození.</li>
+          <li>Schopnosti zabránění lze (pokud není uvedeno jinak) použít jen během bitvy.</li>
+          <li>Přímému poškození nelze zabránit — jen pokud schopnost výslovně uvádí „přímé".</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- SUB: Tah nepřítele -->
+  <div class="subpanel" id="sub-nepritel">
+    <div class="grid two">
+      <div class="card span2"><span class="accent-tab"></span>
+        <h3>Tah nepřítele</h3>
+        <div class="sub">Přesun max 2 pole</div>
+        <ol class="steps">
+          <li><b>Začátek tahu</b> — spusť účinky (např. kostka stavu na žetonu).</li>
+          <li><b>Přesun</b> — až <span class="val">2 pole</span>, a to <b>jen pokud nemá v dosahu žádný cíl</b>. Přesouvá se k nejbližšímu poli, odkud by měl v dosahu a dohledu aspoň 1 zacílitelnou jednotku (mezi ním a cílovým polem musí být pole neobsazená). Pokud takové pole není, jde co nejblíže k nejbližší jednotce (podle priority).</li>
+          <li><b>Útok</b> — zacílí tolik jednotek, kolik je „počet cílů" (symboly postav), v pořadí <b>priority</b>. Hoď všemi soubojovými kostkami jednou, výsledek vyhodnoť vůči každému cíli (od nejvyšší priority). Poté reakce.</li>
+          <li><b>Konec tahu</b> — spusť účinky na konci tahu.</li>
+        </ol>
+        <div class="note"><span class="lbl">Při shodě priority</span> Pokud má více jednotek stejnou prioritu/BZ, cíl/pole zvolí družina. Při přesunu nepřítel nezohledňuje počet možných cílů.</div>
+      </div>
+
+      <div class="card"><span class="accent-tab"></span>
+        <h3>Priorita cíle</h3>
+        <div class="sub">Na koho nepřítel zaútočí</div>
+        <div class="deflist">
+          <div class="row"><div class="term">Nejsilnější</div><div class="desc">Soupeřící jednotka s <b>nejvyšším</b> počtem BZ (bonusové BZ se nepočítají).</div></div>
+          <div class="row"><div class="term">Nejslabší</div><div class="desc">Soupeřící jednotka s <b>nejnižším</b> počtem BZ (bonusové BZ se nepočítají).</div></div>
+          <div class="row"><div class="term">Shoda</div><div class="desc">Při stejné síle cíl / pole zvolí družina.</div></div>
+        </div>
+      </div>
+
+      <div class="card"><span class="accent-tab"></span>
+        <h3>Hodnoty na žetonu</h3>
+        <div class="sub">Vlevo dole a dole</div>
+        <ul class="bullets">
+          <li><b>Dosah</b> — největší vzdálenost útoku nepřítele.</li>
+          <li><b>Souboj</b> — počet soubojových kostek; součet výsledků = poškození každému cíli.</li>
+          <li><b>Obrana</b> — poškození, kterému nepřítel pokaždé zabrání.</li>
+          <li><b>Počet cílů</b> — na kolik jednotek může v tahu zaútočit (symbol všech cílů = všichni v dosahu).</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- SUB: Cíle & konec -->
+  <div class="subpanel" id="sub-cile">
+    <div class="grid two">
+      <div class="card span2"><span class="accent-tab"></span>
+        <h3>Cíle bitev</h3>
+        <div class="sub">Aby družina uspěla</div>
+        <div class="deflist">
+          <div class="row"><div class="term">Vítězství</div><div class="desc">Poraz nebo odstraň <b>všechny</b> nepřátele z mapy (nejčastěji u šarvátky).</div></div>
+          <div class="row"><div class="term">Eliminujte X</div><div class="desc">Poraz/odstraň konkrétní cílovou jednotku popsanou v textu setkání.</div></div>
+          <div class="row"><div class="term">Průzkum</div><div class="desc">Prozkoumej mapu — získej všechny nebeské úlomky (výchozí <b>3</b>). Časté u hlubin.</div></div>
+          <div class="row"><div class="term">Odhalení</div><div class="desc">Získej všechny nebeské úlomky (výchozí 3) a <b>poté ustup z bitvy</b>. Ústup zde = úspěch. ZkB za úlomky získáš i při selhání (ne při porážce celé družiny).</div></div>
+        </div>
+        <div class="note warn"><span class="lbl">Ústup z bitvy</span> Družina může na konci libovolného kola ustoupit — setkání okamžitě skončí. Družina selže a nezíská odměnu (výjimka: cíl Odhalení).</div>
+      </div>
+
+      <div class="card span2"><span class="accent-tab"></span>
+        <h3>Konec bitvy + úklid</h3>
+        <div class="sub">Bitva skončí na konci kola, když…</div>
+        <ul class="bullets">
+          <li>družina splnila cíl · ustoupila · nebo byli všichni dobrodruzi poraženi.</li>
+        </ul>
+        <div class="divider"></div>
+        <h4>Úklid po konci bitvy</h4>
+        <ol class="steps">
+          <li>Odstraň všechny bonusové BZ a BZ nad hodnotu zdraví; žeton dobrodruha vrať na kartu rasy.</li>
+          <li>Odstraň a vyčerpej kostky z výřezů pro aktivní kostky a obnov všechny <b>spálené</b> kostky. (Kostky na stupnici regenerace zůstávají do další bitvy.)</li>
+          <li>Rozlož mapu — žetony nepřátel zpět do sáčků, žetony skrýší do zásoby, dílky roztřiď.</li>
+        </ol>
+        <div class="note"><span class="lbl">Pozor</span> Úklid nastává jen po bitvě, nikdy po mírovém setkání. Poté pokračuj Fází odměn.</div>
+      </div>
+
+      <div class="card span2"><span class="accent-tab"></span>
+        <h3>Porážka</h3>
+        <div class="sub">Ztráta posledního BZ nebo účinek</div>
+        <ul class="bullets">
+          <li><b>Poražený dobrodruh:</b> žeton na kartu rasy, odstraň a vyčerpej všechny aktivní kostky (kostky na stupnici regenerace zůstávají). Nemůže hrát tahy ani získávat kostky únavy. Oživení nad 0 BZ ho vrací do hry.</li>
+          <li><b>Poražený nepřítel:</b> na vrch zásoby poražených nepřátel (úkolové/cílové jednotky odlož stranou).</li>
+          <li><b>Celá družina poražena:</b> pokud nespustíte výpomoc cechu, setkání na konci kola skončí selháním — žeton družiny na nejbližší město, pak Fáze odměn a Odpočinek.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- SUB: Schopnosti nepřátel -->
+  <div class="subpanel" id="sub-schopnosti">
+    <div class="grid two">
+      <div class="card span2"><span class="accent-tab"></span>
+        <h3>Účinky kostek stavů</h3>
+        <div class="sub">Stav platí pro jednotku, která kostku drží (i pro dobrodruha)</div>
+        <div class="deflist gloss">
+          <div class="row"><div class="term">Zhouba</div><div class="desc">Na začátku každého svého tahu jednotka utrpí <b>1 přímé poškození</b>.</div></div>
+          <div class="row"><div class="term">Strach</div><div class="desc">Ignoruj všechny dovednosti jednotky kromě Souboje. Neplatí pro kostky dovedností už umístěné ve výřezech aktivních kostek nebo na stupnici regenerace.</div></div>
+          <div class="row"><div class="term">Oslepení</div><div class="desc">Jednotka považuje <b>všechny</b> jednotky za soupeřící. Pokud útočí, může cílit jen na nejsilnější sousedící jednotku.</div></div>
+          <div class="row"><div class="term">Zmrzačení</div><div class="desc">Když jednotka hodí kostkami Souboje, sniž výsledné poškození z těchto kostek <b>na polovinu</b> (zaokr. dolů). Na přímé poškození neplatí.</div></div>
+          <div class="row"><div class="term">Omráčení</div><div class="desc">Jednotka nemůže házet kostkami v tahu, kdy se přesunula (a naopak přesun v tahu, kdy házela). Na konci jejího tahu kostku stavu odstraň.</div></div>
+          <div class="row"><div class="term">Plížení</div><div class="desc">Na jednotku mohou cílit jen soupeřící jednotky, které s ní <b>sousedily na začátku</b> probíhajícího tahu. Jakmile jednotka udělí poškození, kostku odstraň.</div></div>
+        </div>
+      </div>
+
+      <div class="card span2"><span class="accent-tab"></span>
+        <h3>Obecné dovednosti nepřátel</h3>
+        <div class="sub">Znění dle pravidel (str. 67) + příklad</div>
+        <div class="deflist gloss">
+          <div class="row"><div class="term">Oslabení X</div><div class="desc">Po útoku této jednotky její cíl přidá na svou stupnici regenerace <b>X kostek slabé únavy</b>.</div></div>
+          <div class="row"><div class="term">Rituál X</div><div class="desc">Na konci tahu si všechny spojenecké jednotky v dohledu vyléčí <b>X BZ</b> (sebe jednotka neléčí).</div></div>
+          <div class="row"><div class="term">Rodilý</div><div class="desc">Dovednost jednotky odpovídá aktuální provincii (viz Dovednosti rodilých níže).</div></div>
+          <div class="row"><div class="term">Rozrušení</div><div class="desc">Jakmile si jednotka zvolí cíl, cíl musí <b>vyčerpat 1 svou aktivní kostku</b>.</div></div>
+          <div class="row"><div class="term">Roztříštění</div><div class="desc">Když na jednotku poprvé v tahu zaútočí dobrodruh, musí po útoku odhodit <b>1 připravený předmět typu zbraň</b>.</div></div>
+          <div class="row"><div class="term">Rvačka</div><div class="desc">Ihned po poražení jednotky si každý dobrodruh dobere 1 náhodného nepřítele úrovně 1 a nasadí ho na nejbližší neobsazené pole.</div></div>
+          <div class="row"><div class="term">Rychlost</div><div class="desc">Hodnota přesunu jednotky = číslu aktuálního kola (kola únavy počítej jako 6).</div></div>
+          <div class="row"><div class="term">Tlení</div><div class="desc">Jednotce je na konci jejího tahu uděleno <b>1 přímé poškození</b>.</div></div>
+          <div class="row"><div class="term">Třesk</div><div class="desc">Pokud jednotka v tahu necílí na všechny členy družiny, ber její hodnotu Souboje jako <b>dvojnásobnou</b>.</div></div>
+          <div class="row"><div class="term">Úhyb</div><div class="desc">Když na jednotku zaútočí soupeř, zabrání poškození ve výši počtu hozených kostek dovedností, které <b>neudělily</b> poškození.</div></div>
+          <div class="row"><div class="term">Ústup</div><div class="desc">Pokud v tahu jednotky nikdo neutrpěl poškození, jednotka získá kostku stavu <b>Plížení</b> a vyléčí si 1 BZ.</div></div>
+          <div class="row"><div class="term">Vize</div><div class="desc">Jednotka <b>ignoruje omezení dohledu</b>.</div></div>
+          <div class="row"><div class="term">Vyčkávání</div><div class="desc">Pokud se jednotka v tahu nepřesune, na konci tahu si vyléčí <b>2 BZ</b>.</div></div>
+          <div class="row"><div class="term">Výměna</div><div class="desc">Obsazená pole bere jako neobsazená; při přesunu na obsazené pole si <b>vymění místo</b> s jednotkou, která tam stála.</div></div>
+          <div class="row"><div class="term">Vzdorující</div><div class="desc">Nasaď s bonusovými BZ: <b>2 BZ za každého neporaženého dobrodruha</b>.</div></div>
+          <div class="row"><div class="term">Zastoupení</div><div class="desc">Není-li to poslední nepřítel, po poražení nasaď na její pole nepřítele <b>o úroveň nižší</b>. Poté ji vrať do sáčku.</div></div>
+          <div class="row"><div class="term">Zastrašení</div><div class="desc">Po útoku cíl získá kostku stavu <b>Strach</b>. Pokud už Strach má, místo toho mu ji odstraň.</div></div>
+          <div class="row"><div class="term">Zhouba (dovednost)</div><div class="desc">Po útoku cíl získá kostku stavu <b>Zhouba</b>.</div></div>
+          <div class="row"><div class="term">Zmrzačení (dovednost)</div><div class="desc">Po útoku cíl získá kostku stavu <b>Zmrzačení</b>.</div></div>
+          <div class="row"><div class="term">Zotavení X</div><div class="desc">Jednotka si na začátku svého tahu vyléčí <b>X BZ</b>.</div></div>
+          <div class="row"><div class="term">Železná kůra</div><div class="desc">Když je jednotce uděleno poškození <b>nesousedící</b> jednotkou, její obrana se pro daný útok zvýší o 1.</div></div>
+        </div>
+      </div>
+
+      <div class="card span2"><span class="accent-tab"></span>
+        <h3>Dovednosti rodilých</h3>
+        <div class="sub">Dovednost „Rodilý" → účinek podle provincie</div>
+        <div class="deflist gloss">
+          <div class="row"><div class="term">Bouřný věštec<span class="prov-tag">Black Marsh</span></div><div class="desc">Když si jednotka zvolí cíl, cíl podle počasí vyčerpá tolik aktivních kostek: Slunečno 1 · Déšť 2 · Záplavy 3.</div></div>
+          <div class="row"><div class="term">Mráz<span class="prov-tag">Skyrim</span></div><div class="desc">Když si jednotka zvolí cíl, cíl přesune 1 připravený předmět do batohu (v obléhaném městě všechny připravené předměty).</div></div>
+          <div class="row"><div class="term">Podněcování<span class="prov-tag">High Rock</span></div><div class="desc">Po poražení jednotky si všichni její spojenci vyléčí BZ ve výši aktuální míry nepokojů.</div></div>
+          <div class="row"><div class="term">Výpary<span class="prov-tag">Morrowind</span></div><div class="desc">Poté co na jednotku zaútočí soupeř, tato útočící jednotka získá kostku stavu <b>Oslepení</b>.</div></div>
+          <div class="row"><div class="term">Zadržení<span class="prov-tag">Cyrodiil</span></div><div class="desc">Když si jednotka zvolí cíl, cíl vyčerpá 1 dostupnou kostku dovednosti (dominuje-li frakce Pozůstatky říše, místo toho ji spálí).</div></div>
+          <div class="row"><div class="term">Železná kůra<span class="prov-tag">Valenwood · rozš.</span></div><div class="desc">Když je jednotce uděleno poškození nesousedící jednotkou, obrana se pro daný útok zvýší o 1.</div></div>
+        </div>
+      </div>
+
+      <div class="card span2"><span class="accent-tab"></span>
+        <h3>Zbývající klíčová slova</h3>
+        <div class="note"><span class="lbl">Na fyzickém přehledu v krabici</span> Tato klíčová slova nejsou otištěna v pravidlech — jejich přesné znění najdeš na kartě <b>Přehled dovedností nepřátel</b>: Arkánní, Čepele, Hbitost, Krádež, Krvesaj, Odklonění, Odsek, Omrzliny, Polostín.</div>
+      </div>
     </div>
   </div>
 </section>
@@ -799,6 +959,22 @@ footer .fl{color:var(--gold-deep)}
   var deb;
   search.addEventListener('input',function(){clearTimeout(deb);deb=setTimeout(function(){runSearch(search.value);},140);});
   search.addEventListener('keydown',function(e){if(e.key==='Escape'){search.value='';clearSearch();}});
+
+  // ---- sub-tabs inside Bitva ----
+  var subtabs=Array.prototype.slice.call(document.querySelectorAll('.subtab'));
+  var subpanels=Array.prototype.slice.call(document.querySelectorAll('.subpanel'));
+  function showSub(id){
+    subtabs.forEach(function(t){t.setAttribute('aria-selected',t.dataset.sub===id?'true':'false');});
+    subpanels.forEach(function(p){p.classList.toggle('active',p.id==='sub-'+id);});
+  }
+  subtabs.forEach(function(t){
+    t.addEventListener('click',function(){showSub(t.dataset.sub);});
+    t.addEventListener('keydown',function(e){
+      var i=subtabs.indexOf(t);
+      if(e.key==='ArrowRight'){e.preventDefault();var n=subtabs[(i+1)%subtabs.length];n.focus();n.click();}
+      if(e.key==='ArrowLeft'){e.preventDefault();var p=subtabs[(i-1+subtabs.length)%subtabs.length];p.focus();p.click();}
+    });
+  });
 
   applyAccent(document.getElementById('den'));
 })();
