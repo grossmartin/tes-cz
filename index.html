@@ -144,6 +144,7 @@ main{margin-top:36px}
 .card .sub{font-family:'Oswald',sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.15em;font-size:12.5px;color:var(--accent-deep);margin-bottom:13px}
 .card h4{font-family:'Cinzel',serif;font-weight:600;font-size:16.5px;color:var(--parch-ink);margin:16px 0 6px;letter-spacing:.02em}
 .card p{font-size:17.5px;margin:8px 0;color:#41341f}
+.card p.tight{margin:3px 0}
 .divider{height:1px;background:linear-gradient(90deg,transparent,rgba(122,94,44,.4),transparent);margin:15px 0}
 
 /* numbered step list */
@@ -449,6 +450,7 @@ footer .fl{color:var(--gold-deep)}
     <button class="subtab" role="tab" data-sub="dobrodruh">Tah dobrodruha</button>
     <button class="subtab" role="tab" data-sub="nepritel">Tah nepřítele</button>
     <button class="subtab" role="tab" data-sub="cile">Cíle &amp; konec</button>
+    <button class="subtab" role="tab" data-sub="bojiste">Typy bojišť</button>
     <button class="subtab" role="tab" data-sub="schopnosti">Schopnosti nepřátel</button>
   </div>
 
@@ -618,6 +620,65 @@ footer .fl{color:var(--gold-deep)}
           <li><b>Poražený nepřítel:</b> na vrch zásoby poražených nepřátel (úkolové/cílové jednotky odlož stranou).</li>
           <li><b>Celá družina poražena:</b> pokud nespustíte výpomoc cechu, setkání na konci kola skončí selháním — žeton družiny na nejbližší město, pak Fáze odměn a Odpočinek.</li>
         </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- SUB: Typy bojišť -->
+  <div class="subpanel" id="sub-bojiste">
+    <div class="grid two">
+      <div class="card span2"><span class="accent-tab"></span>
+        <h3>Typy bojišť — přehled</h3>
+        <p>Všechny bitvy sdílejí stejná pravidla kol a chování nepřátel; liší se <b>přípravou mapy</b> a <b>způsobem nasazení nepřátel</b>. Typ je uveden v popisu setkání.</p>
+        <div class="note"><span class="lbl">Zásoba nepřátel (ZN)</span> ZN = hodnota počítadla ZkB družiny, ze které postupně odečítáš úrovně nasazovaných nepřátel. Dobírej vždy nepřítele <b>nejvyšší možné úrovně</b> v rámci ZN. Zbylé body po zaplnění polí propadnou.</div>
+      </div>
+
+      <div class="card span2"><span class="accent-tab"></span>
+        <h3>Šarvátka</h3>
+        <div class="sub">Krátká, přímočará, náhle vyvolaná bitva</div>
+        <p>Mapa = <b>dílek šarvátky</b> (oboustranný — otoč tematičtější stranou) + případné dílky navíc (někdy jako překážky). Pole dílku nemají symboly — ty jsou na <b>schématu</b> na kartě setkání / v kroku úkolu.</p>
+        <h4>Příprava</h4>
+        <ol class="steps">
+          <li><b>Připrav mapu</b> — dílek šarvátky doprostřed; vstupní dílek připoj a nasaď na něj všechny dobrodruhy (od prvního hráče).</li>
+          <li><b>Umísti žetony skrýší</b> — na pole podle schématu (správnou stranou nahoru).</li>
+          <li><b>Nasaď nepřátele</b> — spočítej ZN. Na očíslovaná pole (od <b>1</b>) postupně dobírej nepřátele nejvyšší možné úrovně v rámci ZN a odečítej. Když dojdou pole, další nenasazuj.</li>
+        </ol>
+        <div class="note"><span class="lbl">Cíl</span> Nejčastěji <b>Vítězství</b> — poraz/odstraň všechny nepřátele.</div>
+      </div>
+
+      <div class="card span2"><span class="accent-tab"></span>
+        <h3>Hlubiny</h3>
+        <div class="sub">Průzkum labyrintu · sbírání nebeských úlomků</div>
+        <p>Mapu postupně odhaluješ — dobíráním <b>karet hlubin</b> připojuješ nové dílky. Cíl je zpravidla <b>Průzkum / Odhalení</b>: získat všechny nebeské úlomky (výchozí <b>3</b>).</p>
+        <div class="note warn"><span class="lbl">Zásoba nepřátel — jinak!</span> ZN se <b>nepočítá jednou</b>, ale zvlášť pro <b>každý nově odhalený dílek</b> (podle ZN, tabulky obtížnosti na kartě a počtu symbolů nepřátel na dílku).</div>
+        <h4>Příprava</h4>
+        <ul class="bullets">
+          <li>Rozděl dílky hlubin podle tvarů; umísti jen <b>vstupní dílek</b>.</li>
+          <li>Skrýše ani nepřátele zatím <b>neumisťuj</b> — až při objevení dílku.</li>
+        </ul>
+        <h4>Průzkum pole (symbol průzkumu)</h4>
+        <p class="tight">Spustíš ho <b>přesunem</b> na pole průzkumu, nebo akcí <b>Průzkum</b> cílenou na takové pole v dosahu své výdrže.</p>
+        <ol class="steps">
+          <li><b>Dober dílek</b> odpovídajícího tvaru (není-li, karta se počítá jako 1 nebeský úlomek).</li>
+          <li><b>Spusť účinky</b> „při odhalení".</li>
+          <li><b>Připoj dílek</b> — spáruj sousedící pole se symboly, dílek nesmí překrývat jiné; nech aspoň 1 pole průzkumu dál prozkoumatelné.</li>
+          <li><b>Umísti skrýše</b> — od nejvzdálenějšího pole se symbolem skrýše (dle karty).</li>
+          <li><b>Nasaď nepřátele</b> — podle ZN právě odhaleného dílku.</li>
+        </ol>
+        <div class="note"><span class="lbl">Karty hlubin</span> Rámečky účinků: <b>při odhalení</b> · <b>past</b> (červený) · <b>nebeský úlomek</b> (modrý) · <b>prostředí</b> (zelený — trvalý účinek dílku).</div>
+      </div>
+
+      <div class="card span2"><span class="accent-tab"></span>
+        <h3>Katakomby</h3>
+        <div class="sub">Bitva v pevnosti · pevná mapa dle schématu</div>
+        <p>Mapu <b>sestavíš z několika dílků podle daného schématu</b> (na rozdíl od hlubin se neodhaluje) a řídíš se zvláštními pravidly provincie. ZN je běžná — jako u šarvátky (počet nepřátel určuje ZN + počet očíslovaných polí schématu).</p>
+        <h4>Příprava</h4>
+        <ol class="steps">
+          <li><b>Sestav mapu</b> — všechny dílky doprostřed podle schématu.</li>
+          <li><b>Umísti žetony skrýší</b> — na pole podle schématu.</li>
+          <li><b>Nasaď nepřátele</b> — nejdřív <b>cílové jednotky</b> na označená pole (dle textu setkání). Pak na <b>očíslovaná pole</b> (od 1) nepřátele nejvyšší úrovně v rámci ZN. Nakonec na <b>zvláštní pole</b> (hvězdy/písmena) podle pokynů setkání (při shodě volí družina).</li>
+        </ol>
+        <div class="note"><span class="lbl">Pasti</span> Na dílcích bývají pasti — dobrodruh, který se přesune / je umístěn na pole s pastí, ji <b>musí spustit</b>. Nepřátelé ani společníci pasti nespouští.</div>
       </div>
     </div>
   </div>
