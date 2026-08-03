@@ -145,6 +145,9 @@ main{margin-top:36px}
 .card h4{font-family:'Cinzel',serif;font-weight:600;font-size:16.5px;color:var(--parch-ink);margin:16px 0 6px;letter-spacing:.02em}
 .card p{font-size:17.5px;margin:8px 0;color:#41341f}
 .card p.tight{margin:3px 0}
+.schema{margin:14px 0 4px}
+.schema svg{width:100%;height:auto;display:block;border:1px solid var(--parch-edge);border-radius:5px;background:#efe6cd}
+.schema figcaption{font-family:'Oswald',sans-serif;font-weight:500;text-transform:uppercase;letter-spacing:.12em;font-size:12px;color:var(--accent-deep);text-align:center;margin-bottom:7px}
 .divider{height:1px;background:linear-gradient(90deg,transparent,rgba(122,94,44,.4),transparent);margin:15px 0}
 
 /* numbered step list */
@@ -650,7 +653,143 @@ footer .fl{color:var(--gold-deep)}
         <h3>Hlubiny</h3>
         <div class="sub">Průzkum labyrintu · sbírání nebeských úlomků</div>
         <p>Mapu postupně odhaluješ — dobíráním <b>karet hlubin</b> připojuješ nové dílky. Cíl je zpravidla <b>Průzkum / Odhalení</b>: získat všechny nebeské úlomky (výchozí <b>3</b>).</p>
+        <h4>Vítězství v hlubinách</h4>
+        <ul class="bullets">
+          <li>Mapa je <b>plně prozkoumaná</b>, jakmile <b>ZÍSKÁŠ</b> všechny požadované nebeské úlomky (výchozí <b>3</b>) — nestačí je jen odhalit, dobrodruh na dílek s úlomkem musí <b>přijít</b>. Poté už další dílky neodhaluješ.</li>
+          <li><b>Cíl Průzkum:</b> úspěch = získáš všechny nebeské úlomky a zůstane aspoň 1 neporažený dobrodruh.</li>
+          <li><b>Cíl Odhalení:</b> získáš všechny úlomky a <b>poté ustoupíš z bitvy</b> (ústup = úspěch). I při selhání dostaneš ve Fázi odměn 1 ZkB za každý získaný úlomek (ne při porážce celé družiny).</li>
+        </ul>
         <div class="note warn"><span class="lbl">Zásoba nepřátel — jinak!</span> ZN se <b>nepočítá jednou</b>, ale zvlášť pro <b>každý nově odhalený dílek</b> (podle ZN, tabulky obtížnosti na kartě a počtu symbolů nepřátel na dílku).</div>
+        <figure class="schema">
+          <figcaption>Schéma — nasazení ZN krok za krokem</figcaption>
+          <svg viewBox="0 0 620 812" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schéma: jak se v hlubinách nasazují nepřátelé podle zásoby nepřátel">
+  <defs>
+    <marker id="arh" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#9a7b32"/>
+    </marker>
+    <style>
+      .cin{font-family:'Cinzel',serif;fill:#3b2f1f}
+      .osw{font-family:'Oswald','Arial Narrow',sans-serif;fill:#3b2f1f}
+      .gar{font-family:'EB Garamond',Georgia,serif;fill:#4a3c24}
+    </style>
+  </defs>
+
+  <!-- title -->
+  <text x="310" y="26" text-anchor="middle" class="cin" font-size="21" font-weight="700">Nasazování nepřátel na nový dílek</text>
+  <text x="310" y="49" text-anchor="middle" class="gar" font-size="15" font-style="italic" fill="#6a4f2a">Nasadíš tolik nepřátel, kolik dovolí nejpřísnější ze 3 limitů</text>
+
+  <!-- ===== 3 LIMIT BOXES ===== -->
+  <!-- box 1: ZN -->
+  <g>
+    <rect x="16" y="70" width="188" height="168" rx="7" fill="#f4ecd6" stroke="#c9b483"/>
+    <rect x="16" y="70" width="188" height="30" rx="7" fill="#8a2222"/>
+    <rect x="16" y="86" width="188" height="14" fill="#8a2222"/>
+    <text x="110" y="90" text-anchor="middle" class="osw" font-size="13" font-weight="600" letter-spacing=".04em" fill="#f6e6d8">① ZÁSOBA NEPŘÁTEL</text>
+    <circle cx="110" cy="132" r="24" fill="#8a2222"/>
+    <text x="110" y="139" text-anchor="middle" class="osw" font-size="18" font-weight="600" fill="#f6e6d8">ZN</text>
+    <text x="110" y="178" text-anchor="middle" class="osw" font-size="12.5" font-weight="600" fill="#7a1f1f">Čerstvá pro KAŽDÝ</text>
+    <text x="110" y="194" text-anchor="middle" class="osw" font-size="12.5" font-weight="600" fill="#7a1f1f">nový dílek!</text>
+    <text x="110" y="216" text-anchor="middle" class="gar" font-size="12.5">Součet úrovní nepřátel</text>
+    <text x="110" y="230" text-anchor="middle" class="gar" font-size="12.5">ji nesmí překročit.</text>
+  </g>
+
+  <!-- box 2: table -->
+  <g>
+    <rect x="216" y="70" width="188" height="168" rx="7" fill="#f4ecd6" stroke="#c9b483"/>
+    <rect x="216" y="70" width="188" height="30" rx="7" fill="#556130"/>
+    <rect x="216" y="86" width="188" height="14" fill="#556130"/>
+    <text x="310" y="90" text-anchor="middle" class="osw" font-size="13" font-weight="600" letter-spacing=".04em" fill="#f2f3e6">② TABULKA OBTÍŽNOSTI</text>
+    <!-- mini table -->
+    <g class="osw" font-size="12" font-weight="600">
+      <rect x="236" y="112" width="148" height="80" rx="3" fill="#fbf6e8" stroke="#b9a878"/>
+      <line x1="272" y1="112" x2="272" y2="192" stroke="#cbbb8c"/>
+      <line x1="236" y1="132" x2="384" y2="132" stroke="#cbbb8c"/>
+      <line x1="236" y1="152" x2="384" y2="152" stroke="#cbbb8c"/>
+      <rect x="236" y="152" width="148" height="20" fill="#e4ecc9"/>
+      <line x1="236" y1="172" x2="384" y2="172" stroke="#cbbb8c"/>
+      <text x="254" y="126" text-anchor="middle" fill="#556130">1</text><text x="328" y="126" text-anchor="middle" fill="#4a3c24">5</text>
+      <text x="254" y="146" text-anchor="middle" fill="#556130">2</text><text x="328" y="146" text-anchor="middle" fill="#4a3c24">10 · 5</text>
+      <text x="254" y="166" text-anchor="middle" fill="#3b5010" font-weight="700">3</text><text x="328" y="166" text-anchor="middle" fill="#2f4010" font-weight="700">10 · 5 · 5</text>
+      <text x="254" y="186" text-anchor="middle" fill="#556130">4</text><text x="328" y="186" text-anchor="middle" fill="#4a3c24">20·10·5·5</text>
+    </g>
+    <text x="310" y="210" text-anchor="middle" class="gar" font-size="11.5" font-style="italic" fill="#5a6a34">(příklad hodnot)</text>
+    <text x="310" y="228" text-anchor="middle" class="gar" font-size="12.5">Řádek = počet a max. úroveň.</text>
+  </g>
+
+  <!-- box 3: fields -->
+  <g>
+    <rect x="416" y="70" width="188" height="168" rx="7" fill="#f4ecd6" stroke="#c9b483"/>
+    <rect x="416" y="70" width="188" height="30" rx="7" fill="#3d5c6b"/>
+    <rect x="416" y="86" width="188" height="14" fill="#3d5c6b"/>
+    <text x="510" y="90" text-anchor="middle" class="osw" font-size="13" font-weight="600" letter-spacing=".04em" fill="#eaf2f6">③ POLE NEPŘÁTEL</text>
+    <!-- little tile with enemy spaces -->
+    <g>
+      <polygon points="510,116 543,135 543,173 510,192 477,173 477,135" fill="#e7ded0" stroke="#8a99a0"/>
+      <circle cx="497" cy="146" r="9" fill="#3d5c6b"/><text x="497" y="150" text-anchor="middle" class="osw" font-size="10" fill="#eaf2f6" font-weight="600">✦</text>
+      <circle cx="523" cy="146" r="9" fill="#3d5c6b"/><text x="523" y="150" text-anchor="middle" class="osw" font-size="10" fill="#eaf2f6" font-weight="600">✦</text>
+      <circle cx="510" cy="170" r="9" fill="#3d5c6b"/><text x="510" y="174" text-anchor="middle" class="osw" font-size="10" fill="#eaf2f6" font-weight="600">✦</text>
+    </g>
+    <text x="510" y="212" text-anchor="middle" class="gar" font-size="12.5">Volná pole se symbolem</text>
+    <text x="510" y="228" text-anchor="middle" class="gar" font-size="12.5">nepřítele na dílku.</text>
+  </g>
+
+  <!-- convergence arrows -->
+  <path d="M110,240 L110,262 L300,262" fill="none" stroke="#9a7b32" stroke-width="2"/>
+  <path d="M310,240 L310,272" fill="none" stroke="#9a7b32" stroke-width="2"/>
+  <path d="M510,240 L510,262 L320,262" fill="none" stroke="#9a7b32" stroke-width="2"/>
+  <path d="M310,262 L310,280" fill="none" stroke="#9a7b32" stroke-width="2" marker-end="url(#arh)"/>
+  <rect x="176" y="286" width="268" height="34" rx="17" fill="#8a2222"/>
+  <text x="310" y="308" text-anchor="middle" class="osw" font-size="14.5" font-weight="600" fill="#f6e6d8">= tolik nepřátel nasadíš (min. ze 3)</text>
+
+  <!-- divider -->
+  <line x1="40" y1="344" x2="580" y2="344" stroke="#c9b483" stroke-dasharray="2 4"/>
+  <text x="310" y="368" text-anchor="middle" class="cin" font-size="15" font-weight="700" fill="#7a1f1f">PŘÍKLAD ODEČÍTÁNÍ ZN</text>
+  <text x="310" y="389" text-anchor="middle" class="gar" font-size="14">ZN = <tspan font-weight="700" fill="#7a1f1f">12</tspan>  ·  3 hrdinové → řádek  <tspan font-weight="700" fill="#2f4010">10 · 5 · 5</tspan></text>
+
+  <!-- step rows -->
+  <!-- step 1 -->
+  <g>
+    <rect x="24" y="404" width="572" height="56" rx="6" fill="#fbf6e8" stroke="#cbbb8c"/>
+    <circle cx="52" cy="432" r="15" fill="#556130"/><text x="52" y="437" text-anchor="middle" class="osw" font-size="15" font-weight="600" fill="#fff">1</text>
+    <text x="80" y="426" class="gar" font-size="14.5">Cíl <tspan class="osw" font-weight="600">úroveň 10</tspan>.  ZN 12 ≥ 10  →  vezmi <tspan class="osw" font-weight="600">úroveň 10</tspan>.</text>
+    <text x="80" y="448" class="gar" font-size="13" fill="#6a5a34" font-style="italic">Odečti 10 od ZN.</text>
+    <rect x="470" y="416" width="112" height="32" rx="6" fill="#f0e3c8" stroke="#b9a878"/>
+    <text x="526" y="437" text-anchor="middle" class="osw" font-size="15" font-weight="600" fill="#7a1f1f">ZN 12 → 2</text>
+  </g>
+  <!-- step 2 -->
+  <g>
+    <rect x="24" y="468" width="572" height="56" rx="6" fill="#fbf6e8" stroke="#cbbb8c"/>
+    <circle cx="52" cy="496" r="15" fill="#556130"/><text x="52" y="501" text-anchor="middle" class="osw" font-size="15" font-weight="600" fill="#fff">2</text>
+    <text x="80" y="490" class="gar" font-size="14.5">Cíl <tspan class="osw" font-weight="600">úroveň 5</tspan>, ale ZN je jen <tspan font-weight="700" fill="#7a1f1f">2</tspan> (&lt; 5).</text>
+    <text x="80" y="512" class="gar" font-size="13" fill="#6a5a34" font-style="italic">→ vezmi nejvyššího ≤ 2 = úroveň 1. Odečti 1.</text>
+    <rect x="470" y="480" width="112" height="32" rx="6" fill="#f0e3c8" stroke="#b9a878"/>
+    <text x="526" y="501" text-anchor="middle" class="osw" font-size="15" font-weight="600" fill="#7a1f1f">ZN 2 → 1</text>
+  </g>
+  <!-- step 3 -->
+  <g>
+    <rect x="24" y="532" width="572" height="56" rx="6" fill="#fbf6e8" stroke="#cbbb8c"/>
+    <circle cx="52" cy="560" r="15" fill="#556130"/><text x="52" y="565" text-anchor="middle" class="osw" font-size="15" font-weight="600" fill="#fff">3</text>
+    <text x="80" y="554" class="gar" font-size="14.5">Cíl <tspan class="osw" font-weight="600">úroveň 5</tspan>, ZN 1  →  úroveň 1. Odečti 1.</text>
+    <text x="80" y="576" class="osw" font-size="13" font-weight="600" fill="#7a1f1f">ZN vyčerpána → KONEC nasazování.</text>
+    <rect x="470" y="544" width="112" height="32" rx="6" fill="#efd7d7" stroke="#c08a8a"/>
+    <text x="526" y="565" text-anchor="middle" class="osw" font-size="15" font-weight="600" fill="#7a1f1f">ZN 1 → 0</text>
+  </g>
+
+  <!-- result -->
+  <rect x="24" y="600" width="572" height="34" rx="6" fill="#e4ecc9" stroke="#9caa74"/>
+  <text x="310" y="622" text-anchor="middle" class="osw" font-size="14" font-weight="600" fill="#2f4010">Výsledek: nasazeni 3 nepřátelé — úrovně 10, 1, 1</text>
+
+  <!-- stop conditions -->
+  <rect x="24" y="648" width="572" height="140" rx="7" fill="#f4ecd6" stroke="#c9b483"/>
+  <text x="44" y="674" class="osw" font-size="14" font-weight="600" letter-spacing=".04em" fill="#7a1f1f">STOP nasazování, jakmile nastane PRVNÍ z:</text>
+  <g class="gar" font-size="14">
+    <circle cx="52" cy="700" r="4" fill="#8a2222"/><text x="66" y="705">ZN klesne tak, že už dalšího nasadit nelze (vyčerpána).</text>
+    <circle cx="52" cy="726" r="4" fill="#3d5c6b"/><text x="66" y="731">na dílku došla volná pole se symbolem nepřítele.</text>
+    <circle cx="52" cy="752" r="4" fill="#556130"/><text x="66" y="757">řádek tabulky obtížnosti je u konce (všichni nasazeni).</text>
+  </g>
+  <text x="310" y="780" text-anchor="middle" class="gar" font-size="12.5" font-style="italic" fill="#6a5a34">Zbylé body ZN po zaplnění polí propadnou.</text>
+</svg>
+        </figure>
         <h4>Příprava</h4>
         <ul class="bullets">
           <li>Rozděl dílky hlubin podle tvarů; umísti jen <b>vstupní dílek</b>.</li>
